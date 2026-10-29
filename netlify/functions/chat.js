@@ -32,7 +32,7 @@ BIBLIOTECA DE DADOS:
 ${JSON.stringify(BIBLIOTECA)}`;
 
 
-const MODELO = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
+const MODELO = process.env.GROQ_MODEL || "openai/gpt-oss-120b";
 
 const resp = (status, obj) => ({
   statusCode: status,
