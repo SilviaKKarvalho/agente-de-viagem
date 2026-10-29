@@ -45,7 +45,7 @@ async function send(text){
     hist.push({role:'assistant', content:data.resposta});
   }catch(e){
     hist.pop();
-    bot.innerHTML = render('Não consegui responder agora. Tente enviar novamente em instantes! 😊');
+    bot.innerHTML = render('Não consegui responder agora. 😊\nDetalhe técnico: ' + e.message);
     console.error(e);
   }
   busy = false; btn.disabled = false; inp.focus(); msgs.scrollTop = msgs.scrollHeight;
